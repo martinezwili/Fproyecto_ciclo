@@ -290,6 +290,11 @@ public class RegistrarAdministrador extends javax.swing.JFrame {
         });
 
         jbtncancelar.setText("CANCELAR");
+        jbtncancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtncancelarActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("ACTUALIZAR TABLAS");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -663,7 +668,9 @@ public class RegistrarAdministrador extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -805,6 +812,13 @@ public class RegistrarAdministrador extends javax.swing.JFrame {
             Logger.getLogger(RegistrarAdministrador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jbtncancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtncancelarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Login lg = new Login();
+        lg.setVisible(true);
+    }//GEN-LAST:event_jbtncancelarActionPerformed
 
     /**
      * @param args the command line arguments
