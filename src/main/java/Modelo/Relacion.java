@@ -74,4 +74,17 @@ public class Relacion {
             return false;
         }
     }
+    
+    public boolean eliminar(){
+        Conexionbd conexion = new Conexionbd();
+        String nsql = "DELETE FROM relacion WHERE rel_cedula = '" + getRel_cedula()+ "'";
+        
+        if(conexion.noQuery(nsql) == null){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

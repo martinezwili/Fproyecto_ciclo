@@ -95,7 +95,7 @@ public class Persona {
         }
     }
     
-    public boolean eliminar(String per_cedula){
+    public boolean eliminar(){
         Conexionbd conexion = new Conexionbd();
         String nsql = "DELETE FROM persona WHERE per_cedula = '" + getPer_cedula() +"'";
         
