@@ -31,6 +31,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        contenedor = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         administrador = new javax.swing.JMenuItem();
@@ -41,9 +42,28 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        contenedor.setBackground(new java.awt.Color(204, 204, 204));
+        contenedor.setForeground(new java.awt.Color(204, 204, 204));
+
+        javax.swing.GroupLayout contenedorLayout = new javax.swing.GroupLayout(contenedor);
+        contenedor.setLayout(contenedorLayout);
+        contenedorLayout.setHorizontalGroup(
+            contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 266, Short.MAX_VALUE)
+        );
+        contenedorLayout.setVerticalGroup(
+            contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 226, Short.MAX_VALUE)
+        );
+
         jMenu1.setText("Iniciar Sesion");
 
         administrador.setText("Administrador");
+        administrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                administradorActionPerformed(evt);
+            }
+        });
         jMenu1.add(administrador);
 
         jMenuItem2.setText("Docente");
@@ -77,11 +97,17 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -101,6 +127,13 @@ public class Login extends javax.swing.JFrame {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_registrarteActionPerformed
+
+    private void administradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_administradorActionPerformed
+        // TODO add your handling code here:
+        LoginAdministrador logadm = new LoginAdministrador();
+        contenedor.add(logadm);
+        logadm.setVisible(true);
+    }//GEN-LAST:event_administradorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,6 +172,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem administrador;
+    private javax.swing.JDesktopPane contenedor;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

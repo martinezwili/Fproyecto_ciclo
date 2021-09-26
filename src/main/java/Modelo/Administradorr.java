@@ -7,6 +7,8 @@ package Modelo;
 
 import Conexion.Conexionbd;
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -78,5 +80,29 @@ public class Administradorr{
         {
             return false;
         }
-    }    
+    }  
+    
+    public static boolean login(String a, String b) throws SQLException{
+        Conexionbd conexion = new Conexionbd();
+        String sql = "SELECT adm_cedula FROM administrador WHERE adm_cedula = '" + a +"'";
+        int resul = 0; 
+        boolean as = false;
+        ResultSet rs = conexion.query(sql);
+        if(rs.next()){
+            String sql2 = "SELECT per_cedula FROM persona WHERE per_cedula = '" + a + "' and per_contraseña = '" + b + "'";
+            ResultSet rs2 = conexion.query(sql2);
+            if(rs2.next()){
+                as = true;
+            }
+            else
+            {
+                as = false;
+            }
+        }
+        else
+        {
+            as =  false;
+        }
+        return as;
+    }
 }
