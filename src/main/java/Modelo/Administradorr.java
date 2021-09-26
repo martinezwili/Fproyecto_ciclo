@@ -12,10 +12,10 @@ import java.sql.Date;
  *
  * @author MAWIL
  */
-public class Administrador{
+public class Administradorr{
     private String adm_cedula, adm_correo, for_codigo, adm_per_cedula;
 
-    public Administrador(String adm_cedula, String adm_correo, String for_codigo, String adm_per_cedula) {
+    public Administradorr(String adm_cedula, String adm_correo, String for_codigo, String adm_per_cedula) {
         this.adm_cedula = adm_cedula;
         this.adm_correo = adm_correo;
         this.for_codigo = for_codigo;
@@ -53,7 +53,7 @@ public class Administrador{
     public void setAdm_per_cedula(String adm_per_cedula) {
         this.adm_per_cedula = adm_per_cedula;
     }
-    
+
     public boolean insertar(){
         Conexionbd conexion = new Conexionbd();
         String nsql = "INSERT INTO administrador (adm_cedula, adm_correo, for_codigo, per_cedula) VALUES ('" + getAdm_cedula()+ "','" + getAdm_correo()+ "','" + getFor_codigo()+ "','" + getAdm_per_cedula() + "');";

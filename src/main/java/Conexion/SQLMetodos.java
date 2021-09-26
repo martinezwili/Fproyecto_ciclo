@@ -5,6 +5,7 @@
  */
 package Conexion;
 
+import Modelo.Poliglota;
 import Vista.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -26,7 +27,10 @@ public class SQLMetodos {
         String sql = "SELECT * FROM poliglota";
         ResultSet rs = conexion.query(sql);
         while(rs.next()){
-            lista1.add(rs.getString("pol_poliglota"));
+            Poliglota pol = new Poliglota(null, null);
+            pol.setPol_codigo(rs.getString("pol_codigo"));
+            pol.setPol_poliglota(rs.getString("pol_poliglota"));
+            lista1.add(pol);
         }
         return lista1;
     }

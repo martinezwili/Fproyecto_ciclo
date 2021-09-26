@@ -19,6 +19,10 @@ public class Poliglota {
         this.pol_poliglota = pol_poliglota;
     }
 
+    public Poliglota() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getPol_codigo() {
         return pol_codigo;
     }
