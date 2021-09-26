@@ -10,5 +10,5 @@ package Modelo;
  * @author MAWIL
  */
 public class Docente {
-    private String doc_cedula;
+    private String doc_cedula, doc_nombre;
 }
