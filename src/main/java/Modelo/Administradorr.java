@@ -84,11 +84,13 @@ public class Administradorr{
     
     public static boolean login(String a, String b) throws SQLException{
         Conexionbd conexion = new Conexionbd();
+        //sentencia para validar que sea un administrador
         String sql = "SELECT adm_cedula FROM administrador WHERE adm_cedula = '" + a +"'";
         int resul = 0; 
         boolean as = false;
         ResultSet rs = conexion.query(sql);
         if(rs.next()){
+            //sentencia para comprovar contrase;a
             String sql2 = "SELECT per_cedula FROM persona WHERE per_cedula = '" + a + "' and per_contraseña = '" + b + "'";
             ResultSet rs2 = conexion.query(sql2);
             if(rs2.next()){

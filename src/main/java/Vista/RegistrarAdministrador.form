@@ -207,16 +207,31 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="jtcedula">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtcedulaFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jtnombre">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtnombreFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jtapellido">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtapellidoFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jttelefono">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jttelefonoFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jtcorreo">
             </Component>
             <Component class="javax.swing.JPasswordField" name="jtcontrase&#xf1;a">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtcontrase&#xf1;aFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
